@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Ruby version: 2.6.3
+* Rails version: 5.2.3
+* Table schema: 
+  - User name:string email:string password:string
+  - Task title:string description:text start:datetime end:datetime priority:integer status:integer
+  - TaskTag task_id:integer tag__id
+  - Tag name:string
