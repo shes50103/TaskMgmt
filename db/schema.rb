@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(version: 2019_10_29_074724) do
   create_table "tasks", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.datetime "start"
-    t.datetime "end"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.integer "priority"
     t.integer "status"
     t.datetime "created_at", null: false
