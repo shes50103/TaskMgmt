@@ -1,0 +1,33 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">任務名稱</th>
+      <th scope="col"><%= @task.title %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">內容</th>
+      <td><%= @task.description %></td>
+    </tr>
+    <tr>
+      <th scope="row">開始時間</th>
+      <td><%= @task.start_time %></td>
+    </tr>
+    <tr>
+      <th scope="row">結束時間</th>
+      <td><%= @task.end_time %></td>
+    </tr>
+    <tr>
+      <th scope="row">優先順序</th>
+      <td><%= @task.priority %></td>
+    </tr>
+    <tr>
+      <th scope="row">狀態</th>
+      <td><%= @task.status %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to "編輯任務", edit_task_path(@task), class: "btn btn-warning" %>
+<%= link_to "刪除任務", task_path(@task), method: 'delete', data: {confirm: "確定要刪除任務嗎？"}, class: "btn btn-secondary" %>
