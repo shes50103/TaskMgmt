@@ -4,6 +4,6 @@
 * Rails version: 5.2.3
 * Table schema: 
   - User name:string email:string password:string
-  - Task title:string description:text start:datetime end:datetime priority:integer status:integer
+  - Task title:string description:text start_time:datetime end_time:datetime priority:integer status:integer
   - TaskTag task_id:integer tag__id
   - Tag name:string
