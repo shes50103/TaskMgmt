@@ -7,14 +7,14 @@ RSpec.feature "Tasks", type: :feature do
 
     fill_in :task_title, with: 'Buy food'
     fill_in :task_description, with: 'meat'
-    click_button "送出"
+    click_button I18n.t("submit")
   end
 
   scenario "Creates a new task" do
     visit new_task_path
     fill_in :task_title, with: 'Exercise'
     fill_in :task_description, with: 'swimming'
-    click_button "送出"
+    click_button I18n.t("submit")
 
     expect(page).to have_text("已新增任務")
   end
@@ -30,10 +30,10 @@ RSpec.feature "Tasks", type: :feature do
   scenario "Update a task" do
     visit tasks_path
     click_on 'Buy food'
-    click_on '編輯任務'
+    click_on I18n.t("Task.edit")
     fill_in :task_title, with: 'Buy seafood'
     fill_in :task_description, with: 'shrimp'
-    click_button "送出"
+    click_button I18n.t("submit")
 
     expect(page).to have_text("已更新任務")
 
@@ -47,7 +47,7 @@ RSpec.feature "Tasks", type: :feature do
   scenario "Delete a task" do
     visit tasks_path
     click_on 'Buy food'
-    click_on '刪除任務'
+    click_on I18n.t("Task.delete")
    
     expect(page.driver.browser.switch_to.alert.text).to eq "確定要刪除任務嗎？"
     

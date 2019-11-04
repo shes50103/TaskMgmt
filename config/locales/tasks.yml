@@ -1,0 +1,29 @@
+zh-TW:
+  activerecord:
+    attributes:
+      task:
+        title: 任務名稱
+        description: 內容
+        start_time: 開始時間
+        end_time: 結束時間
+        priority: 優先順序
+        status: 狀態
+  Task:
+    create: 新增任務
+    edit: 編輯任務
+    delete: 刪除任務
+    delete_confirm: 確定要刪除任務嗎？
+  Task_Priority:
+    low: 低
+    medium: 中
+    high: 高
+  Task_status:
+    to_do: 待完成
+    doing: 進行中
+    done: 已完成
+  Task_flash:
+    success_created: 已新增任務
+    success_updated: 已更新任務
+    success_deleted: 已刪除任務
+    fail_to_create: 新增失敗，請重新確認輸入之資料
+    fail_to_update: 更新失敗，請重新確認輸入之資料

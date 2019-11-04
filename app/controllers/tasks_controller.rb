@@ -17,10 +17,10 @@ class TasksController < ApplicationController
 
     if @task.save
       redirect_to tasks_path
-      flash[:success] = "已新增任務"
+      flash[:success] = I18n.t("Task_flash.success_created")
     else
       render :new
-      flash.now[:error] = "新增失敗，請重新確認輸入之資料"
+      flash.now[:error] = I18n.t("Task_flash.fail_to_create")
     end
   end
 
@@ -30,17 +30,17 @@ class TasksController < ApplicationController
   def update
     if @task.update(task_params)
       redirect_to tasks_path
-      flash[:success] = "已更新任務"
+      flash[:success] = I18n.t("Task_flash.success_updated")
     else
       render :edit
-      flash.now[:error] = "更新失敗，請重新確認輸入之資料"
+      flash.now[:error] = I18n.t("Task_flash.fail_to_update")
     end
   end
 
   def destroy
     @task.destroy
     redirect_to tasks_path
-    flash[:success] = "已刪除任務"
+    flash[:success] = I18n.t("Task_flash.success_deleted")
   end
 
   private

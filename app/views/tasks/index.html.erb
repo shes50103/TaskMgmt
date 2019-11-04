@@ -2,12 +2,12 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">任務名稱</th>
-      <th scope="col">內容</th>
-      <th scope="col">開始時間</th>
-      <th scope="col">結束時間</th>
-      <th scope="col">優先順序</th>
-      <th scope="col">狀態</th>
+      <th scope="col"><%= t("activerecord.attributes.task.title")%></th>
+      <th scope="col"><%= t("activerecord.attributes.task.description")%></th>
+      <th scope="col"><%= t("activerecord.attributes.task.start_time")%></th>
+      <th scope="col"><%= t("activerecord.attributes.task.end_time")%></th>
+      <th scope="col"><%= t("activerecord.attributes.task.priority")%></th>
+      <th scope="col"><%= t("activerecord.attributes.task.title")%></th>
     </tr>
   </thead>
   <tbody>
@@ -18,11 +18,11 @@
         <td><%= task.description %></td>
         <td><%= task.start_time %></td>
         <td><%= task.end_time %></td>
-        <td><%= task.priority %></td>
-        <td><%= task.status %></td>
+        <td><%= t("Task_Priority.#{task.priority}")%></td>
+        <td><%= t("Task_status.#{task.status}")%></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to "新增任務", new_task_path, class: "btn btn-info" %>
+<%= link_to t("Task.create"), new_task_path, class: "btn btn-info" %>
