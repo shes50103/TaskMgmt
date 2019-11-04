@@ -5,4 +5,6 @@ class Task < ApplicationRecord
 
   enum priority: { high: 0, medium: 1 ,low: 2 }
   enum status: { to_do: 0, doing: 1 ,done: 2 }
+
+  default_scope { order('created_at DESC') }
 end
