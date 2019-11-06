@@ -1,33 +1,33 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">任務名稱</th>
+      <th scope="col"><%= t("activerecord.attributes.task.title")%></th>
       <th scope="col"><%= @task.title %></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">內容</th>
+      <th scope="row"><%= t("activerecord.attributes.task.description")%></th>
       <td><%= @task.description %></td>
     </tr>
     <tr>
-      <th scope="row">開始時間</th>
+      <th scope="row"><%= t("activerecord.attributes.task.start_time")%></th>
       <td><%= @task.start_time %></td>
     </tr>
     <tr>
-      <th scope="row">結束時間</th>
+      <th scope="row"><%= t("activerecord.attributes.task.end_time")%></th>
       <td><%= @task.end_time %></td>
     </tr>
     <tr>
-      <th scope="row">優先順序</th>
+      <th scope="row"><%= t("activerecord.attributes.task.priority")%></th>
       <td><%= @task.priority %></td>
     </tr>
     <tr>
-      <th scope="row">狀態</th>
+      <th scope="row"><%= t("activerecord.attributes.task.title")%></th>
       <td><%= @task.status %></td>
     </tr>
   </tbody>
 </table>
 
-<%= link_to "編輯任務", edit_task_path(@task), class: "btn btn-warning" %>
-<%= link_to "刪除任務", task_path(@task), method: 'delete', data: {confirm: "確定要刪除任務嗎？"}, class: "btn btn-secondary" %>
+<%= link_to t("Task.edit"), edit_task_path(@task), class: "btn btn-warning" %>
+<%= link_to t("Task.delete"), task_path(@task), method: 'delete', data: {confirm: t("Task.delete_confirm") }, class: "btn btn-secondary" %>
